@@ -43,7 +43,7 @@ public class MergeSort {
         if(array.length <= 1){
             return array;
         }
-        int middleIndex = (int)Math.floor(array.length / 2);
+        int middleIndex = (int)Math.floor(array.length >> 1);
         int[] leftArray = Arrays.copyOfRange(array, 0, middleIndex);
         int[] rightArray = Arrays.copyOfRange(array, middleIndex, array.length);
         int[] left = mergeSort(leftArray);
