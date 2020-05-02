@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class MergeSort {
-    private static int[] merge(int[] firstArray, int[] secondArray){
+    public static int[] merge(int[] firstArray, int[] secondArray){
         int firstArraySize = firstArray.length;
         int secondArraySize = secondArray.length;
         int[] result = new int[firstArraySize + secondArraySize];
