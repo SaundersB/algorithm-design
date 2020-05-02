@@ -1,6 +1,13 @@
 import java.util.Arrays;
 
 public class MergeSort {
+    /**
+     * Merge two sorted arrays.
+     * O(n + m) => O(n)
+     * @param firstArray
+     * @param secondArray
+     * @return
+     */
     public static int[] merge(int[] firstArray, int[] secondArray){
         int firstArraySize = firstArray.length;
         int secondArraySize = secondArray.length;
@@ -32,11 +39,15 @@ public class MergeSort {
         return result;
     }
 
-    public static void main(String[] args) {
-        System.out.println("Testing the merge function");
-        int[] firstArray = {4, 5, 6, 7};
-        int[] secondArray = {1, 2, 3, 3};
-        int[] result = MergeSort.merge(firstArray, secondArray);
-        System.out.println(Arrays.toString(result));
+    public static int[] mergeSort(int[] array){
+        if(array.length <= 1){
+            return array;
+        }
+        int middleIndex = (int)Math.floor(array.length / 2);
+        int[] leftArray = Arrays.copyOfRange(array, 0, middleIndex);
+        int[] rightArray = Arrays.copyOfRange(array, middleIndex, array.length);
+        int[] left = mergeSort(leftArray);
+        int[] right = mergeSort(rightArray);
+        return merge(left, right);
     }
 }

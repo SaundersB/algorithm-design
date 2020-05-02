@@ -21,4 +21,12 @@ public class MergeSortTest {
         int[] result = MergeSort.merge(firstArray, secondArray);
         assertArrayEquals(expectedResult, result);
     }
+
+    @Test
+    public void testMergeSort(){
+        int[] testArray = {188, 45, 20, 530, -1};
+        int[] result = MergeSort.mergeSort(testArray);
+        int[] expectedResult = {-1, 20, 45, 188, 530};
+        assertArrayEquals(expectedResult, result);
+    }
 }
