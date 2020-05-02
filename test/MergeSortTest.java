@@ -12,4 +12,13 @@ public class MergeSortTest {
         int[] result = MergeSort.merge(firstArray, secondArray);
         assertArrayEquals(expectedResult, result);
     }
+
+    @Test
+    public void testMergeTwoArraysWithNegativeNumbers(){
+        int[] firstArray = {4, 5, 6, 7};
+        int[] secondArray = {-5, -4, -1, 3};
+        int[] expectedResult = {-5, -4, -1, 3, 4, 5, 6, 7};
+        int[] result = MergeSort.merge(firstArray, secondArray);
+        assertArrayEquals(expectedResult, result);
+    }
 }
