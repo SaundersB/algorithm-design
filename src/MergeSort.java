@@ -4,9 +4,6 @@ public class MergeSort {
     /**
      * Merge two sorted arrays.
      * O(n + m) => O(n)
-     * @param firstArray
-     * @param secondArray
-     * @return
      */
     public static int[] merge(int[] firstArray, int[] secondArray){
         int firstArraySize = firstArray.length;
@@ -35,10 +32,13 @@ public class MergeSort {
             secondCount++;
             resultCount++;
         }
-
         return result;
     }
 
+    /**
+     * Sorts and array by merging sub-arrays.
+     * O(n) for merge * O(log n) for mergeSort => O(n log n)
+     */
     public static int[] mergeSort(int[] array){
         if(array.length <= 1){
             return array;
