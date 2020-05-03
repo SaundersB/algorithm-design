@@ -160,9 +160,22 @@ public class SinglyLinkedList {
         this.length++;
     }
 
-
+    /**
+     * Reverse a linked list
+     * O(n)
+     */
     public void reverse(){
-
+        Node node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+        Node next = null;
+        Node previous = null;
+        for(int i = 0; i < this.length; i++){
+            next = node.getNext();
+            node.setNext(previous);
+            previous = node;
+            node = next;
+        }
     }
 
     /**
