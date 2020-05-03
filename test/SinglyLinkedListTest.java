@@ -87,5 +87,15 @@ public class SinglyLinkedListTest {
         singlyLinkedList.unshift(45);
         assertEquals(45, singlyLinkedList.getHead().getValue());
         assertEquals(25, singlyLinkedList.getTail().getValue());
+        singlyLinkedList.pop();
+        singlyLinkedList.pop();
+        singlyLinkedList.pop();
+        singlyLinkedList.pop();
+        singlyLinkedList.pop();
+        singlyLinkedList.pop();
+        singlyLinkedList.pop();
+        singlyLinkedList.pop();
+        assertNull(singlyLinkedList.getHead());
+        assertNull(singlyLinkedList.getTail());
     }
 }
