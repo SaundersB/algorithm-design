@@ -2,10 +2,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class StackTest {
+public class StackListTest {
     @Test
     public void testQueue() throws Exception {
-        StackArray stack = new StackArray();
+        StackList stack = new StackList();
         stack.push(5);
         stack.push(10);
         assertFalse(stack.isEmpty());
