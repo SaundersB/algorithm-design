@@ -65,6 +65,9 @@ public class SinglyLinkedList {
         return true;
     }
 
+    /**
+     * O(n) from this.get()
+     */
     public void remove(int index){
         if(index < 0 || index >= this.length){
             return;
@@ -155,6 +158,11 @@ public class SinglyLinkedList {
             this.head = newNode;
         }
         this.length++;
+    }
+
+
+    public void reverse(){
+
     }
 
     /**
