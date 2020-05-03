@@ -13,6 +13,7 @@ public class SinglyLinkedList {
     }
 
     /**
+     * Get the node at a current index.
      * O(n)
      */
     public Node get(int index){
@@ -28,6 +29,10 @@ public class SinglyLinkedList {
         return current;
     }
 
+    /**
+     * Set the value for a given element's index.
+     * O(n) From get method
+     */
     public boolean set(int index, int value){
         Node node = this.get(index);
         if(node != null){
