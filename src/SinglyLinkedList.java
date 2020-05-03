@@ -14,6 +14,7 @@ public class SinglyLinkedList {
 
     /**
      * Adds to the end of the list
+     * O(1)
      **/
     public void push(int value){
         Node newNode = new Node(value);
@@ -29,6 +30,7 @@ public class SinglyLinkedList {
 
     /**
      * Removes from the end of the list
+     * O(n)
      **/
     public Node pop(){
         if(this.head == null){
@@ -52,6 +54,7 @@ public class SinglyLinkedList {
 
     /**
      * Removes from the beginning of the list
+     * O(1)
      **/
     public Node shift(){
         if(this.head == null){
@@ -69,6 +72,7 @@ public class SinglyLinkedList {
 
     /**
      * Adds to the beginning of the list
+     * O(1)
      */
     public void unshift(int value){
         Node newNode = new Node(value);
@@ -82,10 +86,20 @@ public class SinglyLinkedList {
         this.length++;
     }
 
+    /**
+     * Get the head of the list
+     * O(1)
+     * @return
+     */
     public Node getHead(){
         return this.head;
     }
 
+    /**
+     * Get the tail of the list
+     * O(1)
+     * @return
+     */
     public Node getTail(){
         return this.tail;
     }
