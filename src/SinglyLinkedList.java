@@ -43,7 +43,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     *
+     * O(1)
      */
     public boolean insert(int index, int value){
         if(index < 0 || index > this.length){
@@ -63,6 +63,24 @@ public class SinglyLinkedList {
         newNode.setNext(temp);
         this.length++;
         return true;
+    }
+
+    public void remove(int index){
+        if(index < 0 || index >= this.length){
+            return;
+        }
+        if(index == this.length - 1){
+            this.pop();
+            return;
+        }
+        if(index == 0){
+            this.shift();
+            return;
+        }
+        Node previousNode = this.get(index - 1);
+        Node removed = previousNode.getNext();
+        previousNode.setNext(removed.getNext());
+        this.length--;
     }
 
     /**
