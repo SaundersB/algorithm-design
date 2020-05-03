@@ -9,6 +9,9 @@ public class ListQueue implements QueueInterface {
         this.length = 0;
     }
 
+    /**
+     * O(1)
+     */
     @Override
     public int enqueue(int number) {
         Node newNode = new Node(number);
@@ -21,6 +24,9 @@ public class ListQueue implements QueueInterface {
         return this.length++;
     }
 
+    /**
+     * O(1)
+     */
     @Override
     public int dequeue(){
         if(this.first == null){
@@ -35,11 +41,17 @@ public class ListQueue implements QueueInterface {
         return temp.getValue();
     }
 
+    /**
+     * O(1)
+     */
     @Override
     public int front() {
         return this.first.getValue();
     }
 
+    /**
+     * O(1)
+     */
     @Override
     public int rear() {
         return this.last.getValue();
