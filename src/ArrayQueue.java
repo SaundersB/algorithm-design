@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
-public class Queue {
+public class ArrayQueue implements QueueInterface {
     private final ArrayList<Integer> numbersArray;
 
-    public Queue(){
+    public ArrayQueue(){
         this.numbersArray = new ArrayList<>();
     }
 
-    public void enqueue(int number){
+    public int enqueue(int number){
         this.numbersArray.add(number);
+        return this.numbersArray.size() - 1;
     }
 
-    public int dequeue() throws Exception {
+    public int dequeue(){
         if(this.numbersArray.size() > 0) {
             return this.numbersArray.remove(0);
-        } else {
-            throw new Exception("Queue underflow");
         }
+        return -1;
     }
 
     public int front(){

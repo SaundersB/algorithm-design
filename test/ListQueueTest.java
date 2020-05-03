@@ -1,12 +1,10 @@
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class QueueTest {
+public class ListQueueTest {
     @Test
     public void testQueue() throws Exception {
-        Queue queue = new Queue();
+        ListQueue queue = new ListQueue();
         queue.enqueue(5);
         queue.enqueue(10);
         int value = queue.dequeue();
