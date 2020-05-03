@@ -34,6 +34,10 @@ public class SinglyLinkedList {
         this.tail = newTail;
         this.tail.setNext(null);
         this.length--;
+        if(this.length == 0){
+            this.head = null;
+            this.tail = null;
+        }
         return current;
     }
 

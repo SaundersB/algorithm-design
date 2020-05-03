@@ -27,7 +27,7 @@ public class SinglyLinkedListTest {
         assertEquals(5, singlyLinkedList.getHead().getValue());
         assertEquals(5, singlyLinkedList.getTail().getValue());
         singlyLinkedList.pop();
-        assertNull(singlyLinkedList.getHead().getNext());
-        assertNull(singlyLinkedList.getTail().getNext());
+        assertNull(singlyLinkedList.getHead());
+        assertNull(singlyLinkedList.getTail());
     }
 }
