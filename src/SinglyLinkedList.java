@@ -72,9 +72,10 @@ public class SinglyLinkedList {
         if(this.head == null){
             this.head = newNode;
             this.tail = this.head;
+        } else {
+            newNode.setNext(this.head);
+            this.head = newNode;
         }
-        newNode.setNext(this.head);
-        this.head = newNode;
         this.length++;
     }
 
