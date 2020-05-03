@@ -3,6 +3,9 @@ public class SinglyLinkedList {
     private Node head;
     private Node tail;
 
+    /**
+     * Constructs an initial singly linked list with 0 elements pointing to a null head and tail.
+     */
     public SinglyLinkedList(){
         this.length = 0;
         this.head = null;
