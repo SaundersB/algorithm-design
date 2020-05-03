@@ -9,6 +9,10 @@ public class StackList implements StackInterface{
         this.length = 0;
     }
 
+    /**
+     * Add a new element to the stack.
+     * O(1)
+     */
     @Override
     public int push(int number) {
         Node newNode = new Node(number);
@@ -23,6 +27,10 @@ public class StackList implements StackInterface{
         return this.length++;
     }
 
+    /**
+     * Remove an element from the stack.
+     * O(1)
+     */
     @Override
     public int pop() {
         if(this.first == null){
@@ -37,11 +45,19 @@ public class StackList implements StackInterface{
         return temp.getValue();
     }
 
+    /**
+     * Looking at the value of the first element.
+     * O(1)
+     */
     @Override
     public int peek() {
         return this.first.getValue();
     }
 
+    /**
+     * Checking if the stack is empty or not.
+     * O(1)
+     */
     @Override
     public boolean isEmpty() {
         return this.first == null;
