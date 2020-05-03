@@ -12,6 +12,10 @@ public class BinarySearchTree {
         }
         TreeNode current = this.root;
         while(true){
+            if(value == current.getValue()){
+                // Prevent duplicates
+                return;
+            }
             if(value < current.getValue()){
                 if(current.getLeft() == null){
                     current.setLeft(newNode);
