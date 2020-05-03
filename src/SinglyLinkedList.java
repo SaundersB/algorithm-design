@@ -41,6 +41,20 @@ public class SinglyLinkedList {
         return current;
     }
 
+    public Node shift(){
+        if(this.head == null){
+            return null;
+        }
+        Node current = this.head;
+        this.head = current.getNext();
+        this.length--;
+        if(this.length == 0){
+            this.head = null;
+            this.tail = null;
+        }
+        return current;
+    }
+
     public Node getHead(){
         return this.head;
     }
