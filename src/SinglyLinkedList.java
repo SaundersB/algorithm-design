@@ -43,6 +43,29 @@ public class SinglyLinkedList {
     }
 
     /**
+     *
+     */
+    public boolean insert(int index, int value){
+        if(index < 0 || index > this.length){
+            return false;
+        }
+        if(index == this.length){
+            this.push(value);
+            return true;
+        } else if(index == 0){
+            this.unshift(value);
+            return true;
+        }
+        Node newNode = new Node(value);
+        Node previousNode = this.get(index - 1);
+        Node temp = previousNode.getNext();
+        previousNode.setNext(newNode);
+        newNode.setNext(temp);
+        this.length++;
+        return true;
+    }
+
+    /**
      * Adds to the end of the list
      * O(1)
      **/
