@@ -7,11 +7,23 @@ public class Queue {
         this.numbersArray = new ArrayList<>();
     }
 
-    public void push(int number){
+    public void enqueue(int number){
         this.numbersArray.add(number);
     }
 
-    public int pop(){
-        return this.numbersArray.remove(0);
+    public int dequeue() throws Exception {
+        if(this.numbersArray.size() > 0) {
+            return this.numbersArray.remove(0);
+        } else {
+            throw new Exception("Queue underflow");
+        }
+    }
+
+    public int front(){
+        return this.numbersArray.get(0);
+    }
+
+    public int rear(){
+        return this.numbersArray.get(this.numbersArray.size() - 1);
     }
 }

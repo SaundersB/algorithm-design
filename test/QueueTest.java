@@ -5,13 +5,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class QueueTest {
     @Test
-    public void testQueue(){
+    public void testQueue() throws Exception {
         Queue queue = new Queue();
-        queue.push(5);
-        queue.push(10);
-        int value = queue.pop();
+        queue.enqueue(5);
+        queue.enqueue(10);
+        int value = queue.dequeue();
         assertEquals(value, 5);
-        int secondValue = queue.pop();
+        int secondValue = queue.dequeue();
         assertEquals(secondValue, 10);
     }
 }
