@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StackTest {
     @Test
     public void testQueue() throws Exception {
-        Stack stack = new Stack();
+        StackArray stack = new StackArray();
         stack.push(5);
         stack.push(10);
         assertFalse(stack.isEmpty());

@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 
-public class Stack {
+public class StackArray implements StackInterface{
     private final ArrayList<Integer> arrayList;
 
     private int getMostRecentIndex(){
         return this.arrayList.size() - 1;
     }
 
-    public Stack(){
+    public StackArray(){
         this.arrayList = new ArrayList<>();
     }
 
-    public void push(int number){
+    public int push(int number){
         this.arrayList.add(number);
+        return this.arrayList.size() - 1;
     }
 
     public int pop(){
