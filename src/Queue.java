@@ -12,6 +12,6 @@ public class Queue {
     }
 
     public int pop(){
-        return this.numbersArray.remove(this.numbersArray.size() - 1);
+        return this.numbersArray.remove(0);
     }
 }

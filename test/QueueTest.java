@@ -10,8 +10,8 @@ public class QueueTest {
         queue.push(5);
         queue.push(10);
         int value = queue.pop();
-        assertEquals(value, 10);
+        assertEquals(value, 5);
         int secondValue = queue.pop();
-        assertEquals(secondValue, 5);
+        assertEquals(secondValue, 10);
     }
 }
