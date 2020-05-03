@@ -12,6 +12,19 @@ public class SinglyLinkedList {
         this.tail = null;
     }
 
+    public Node get(int index){
+        if(index < 0 || index >= this.length){
+            return null;
+        }
+        int count = 0;
+        Node current = this.head;
+        while(count != index){
+            current = current.getNext();
+            count++;
+        }
+        return current;
+    }
+
     /**
      * Adds to the end of the list
      * O(1)
