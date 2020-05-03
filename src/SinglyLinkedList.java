@@ -9,6 +9,9 @@ public class SinglyLinkedList {
         this.tail = null;
     }
 
+    /**
+     * Adds to the end of the list
+     **/
     public void push(int value){
         Node newNode = new Node(value);
         if(this.head == null){
@@ -21,6 +24,9 @@ public class SinglyLinkedList {
         this.length++;
     }
 
+    /**
+     * Removes from the end of the list
+     **/
     public Node pop(){
         if(this.head == null){
             return this.tail;
@@ -41,6 +47,9 @@ public class SinglyLinkedList {
         return current;
     }
 
+    /**
+     * Removes from the beginning of the list
+     **/
     public Node shift(){
         if(this.head == null){
             return null;
@@ -53,6 +62,20 @@ public class SinglyLinkedList {
             this.tail = null;
         }
         return current;
+    }
+
+    /**
+     * Adds to the beginning of the list
+     */
+    public void unshift(int value){
+        Node newNode = new Node(value);
+        if(this.head == null){
+            this.head = newNode;
+            this.tail = this.head;
+        }
+        newNode.setNext(this.head);
+        this.head = newNode;
+        this.length++;
     }
 
     public Node getHead(){
