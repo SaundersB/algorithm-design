@@ -28,6 +28,15 @@ public class SinglyLinkedList {
         return current;
     }
 
+    public boolean set(int index, int value){
+        Node node = this.get(index);
+        if(node != null){
+            node.setValue(value);
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Adds to the end of the list
      * O(1)
@@ -105,7 +114,6 @@ public class SinglyLinkedList {
     /**
      * Get the head of the list
      * O(1)
-     * @return
      */
     public Node getHead(){
         return this.head;
@@ -114,7 +122,6 @@ public class SinglyLinkedList {
     /**
      * Get the tail of the list
      * O(1)
-     * @return
      */
     public Node getTail(){
         return this.tail;
