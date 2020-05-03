@@ -21,6 +21,22 @@ public class SinglyLinkedList {
         this.length++;
     }
 
+    public Node pop(){
+        if(this.head == null){
+            return this.tail;
+        }
+        Node current = this.head;
+        Node newTail = current;
+        while(current.getNext() != null){
+            newTail = current;
+            current = current.getNext();
+        }
+        this.tail = newTail;
+        this.tail.setNext(null);
+        this.length--;
+        return current;
+    }
+
     public Node getHead(){
         return this.head;
     }

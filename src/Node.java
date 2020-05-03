@@ -1,14 +1,18 @@
 public class Node {
     private final int value;
-    private Object next;
+    private Node next;
 
     public Node(int val){
         this.value = val;
         this.next = null;
     }
 
-    public void setNext(Object next){
+    public void setNext(Node next){
         this.next = next;
+    }
+
+    public Node getNext(){
+        return this.next;
     }
 
     public int getValue(){
