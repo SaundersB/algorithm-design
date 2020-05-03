@@ -11,14 +11,20 @@ public class Stack {
     }
 
     public int pop(){
-        return this.arrayList.remove(this.arrayList.size() - 1);
+        if(!this.isEmpty()) {
+            return this.arrayList.remove(this.arrayList.size() - 1);
+        }
+        return -1;
     }
 
     public int peek(){
-        return this.arrayList.get(this.arrayList.size() - 1);
+        if(!this.isEmpty()) {
+            return this.arrayList.get(this.arrayList.size() - 1);
+        }
+        return -1;
     }
 
     public boolean isEmpty(){
-        return this.arrayList.size() > 0;
+        return this.arrayList.size() <= 0;
     }
 }
