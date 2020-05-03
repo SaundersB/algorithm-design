@@ -12,6 +12,9 @@ public class SinglyLinkedList {
         this.tail = null;
     }
 
+    /**
+     * O(n)
+     */
     public Node get(int index){
         if(index < 0 || index >= this.length){
             return null;
