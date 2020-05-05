@@ -34,6 +34,24 @@ public class BinarySearchTree {
         }
     }
 
+    public boolean exists(int value){
+        if(this.root == null){
+            return false;
+        }
+        TreeNode current = this.root;
+        while(current != null){
+            if(value == current.getValue()){
+                return true;
+            }
+            else if (value < current.getValue()){
+                current = current.getLeft();
+            } else {
+                current = current.getRight();
+            }
+        }
+        return false;
+    }
+
     private TreeNode getRoot() {
         return root;
     }
