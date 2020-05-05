@@ -4,6 +4,10 @@ public class BinarySearchTree {
     public BinarySearchTree(){
         this.root = null;
     }
+
+    /**
+     * O(log n)
+     */
     public void insert(int value){
         TreeNode newNode = new TreeNode(value);
         if(this.root == null){
@@ -34,6 +38,9 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * O(log n)
+     */
     public boolean exists(int value){
         if(this.root == null){
             return false;
