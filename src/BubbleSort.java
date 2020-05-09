@@ -1,6 +1,6 @@
 public class BubbleSort {
     /**
-     *
+     * O(n^2)
      */
     public static int[] sort(int[] array){
         for(int i = array.length; i > 0; i--){
