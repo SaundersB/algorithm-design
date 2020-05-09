@@ -6,7 +6,7 @@ public class QuickSort {
         return array;
     }
 
-    public static int pivot(int[] array, int startIndex, int endIndex){
+    public static int pivot(int[] array, int startIndex){
         int pivot = array[startIndex];
         int swapIndex = startIndex;
         for(int i = startIndex + 1; i < array.length; i++){
@@ -21,7 +21,7 @@ public class QuickSort {
 
     public static int[] quickSort(int[] array, int left, int right){
         if(left < right) {
-            int pivotIndex = pivot(array, left, right);
+            int pivotIndex = pivot(array, left);
             quickSort(array, left, pivotIndex - 1);
             quickSort(array, pivotIndex + 1, right);
         }
