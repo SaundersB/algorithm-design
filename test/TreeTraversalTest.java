@@ -10,6 +10,13 @@ public class TreeTraversalTest {
         tree.insert(10);
         tree.insert(15);
         tree.insert(2);
+        /*
+         *              5
+         *            2   10
+         *                  15
+         *
+         *          [5, 2, 10, 15]
+         */
         assertArrayEquals(new int[]{5, 2, 10, 15}, TreeTraversal.breadthFirstSearch(tree));
     }
 }

@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TreeTraversal {
+    /**
+     * Search each level of a tree's breadth before descending down the tree.
+     */
     public static int[] breadthFirstSearch(BinarySearchTree tree){
         TreeNode node = tree.getRoot();
         ArrayList<TreeNode> queue = new ArrayList<>();
