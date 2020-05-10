@@ -10,7 +10,8 @@ public class BinarySearchTreeTest {
         tree.insert(10);
         tree.insert(15);
         tree.insert(2);
-        int[] result = {2, 5,10,15};
+        assertEquals(5, tree.getRoot().getValue());
+        assertEquals(10, tree.getRoot().getRight().getValue());
     }
 
     @Test

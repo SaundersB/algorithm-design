@@ -59,7 +59,7 @@ public class BinarySearchTree {
         return false;
     }
 
-    private TreeNode getRoot() {
+    protected TreeNode getRoot() {
         return root;
     }
     private void setRoot(TreeNode root) {
