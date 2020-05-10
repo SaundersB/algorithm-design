@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TreeTraversal {
     /**
-     * Search each level of a tree's breadth before descending down the tree.
+     * Visit each level of a tree's breadth before descending down the tree.
      */
     public static int[] breadthFirstSearch(BinarySearchTree tree){
         TreeNode node = tree.getRoot();
@@ -21,6 +20,25 @@ public class TreeTraversal {
                 queue.add(node.getRight());
             }
         }
-        return visited.stream().mapToInt(Integer::intValue).toArray();
+        return ArrayManipulator.arrayListToIntArray(visited);
+    }
+
+    /*
+     * Visit all nodes of a tree vertically before progressing to the next node.
+     */
+    public int[] preOrderDepthFirstSearch(BinarySearchTree tree){
+        ArrayList<Integer> visited = new ArrayList<>();
+        this.traverse(visited, tree.getRoot());
+        return ArrayManipulator.arrayListToIntArray(visited);
+    }
+
+    private void traverse(ArrayList<Integer> visited, TreeNode node){
+        visited.add(node.getValue());
+        if(node.getLeft() != null){
+            traverse(visited, node.getLeft());
+        }
+        if(node.getRight() != null){
+            traverse(visited, node.getRight());
+        }
     }
 }
