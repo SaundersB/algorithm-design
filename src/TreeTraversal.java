@@ -38,6 +38,12 @@ public class TreeTraversal {
         return ArrayManipulator.arrayListToIntArray(visited);
     }
 
+    public int[] inOrderDepthFirstSearch(BinarySearchTree tree){
+        ArrayList<Integer> visited = new ArrayList<>();
+        this.inOrderTraversal(visited, tree.getRoot());
+        return ArrayManipulator.arrayListToIntArray(visited);
+    }
+
     private void preOrderTraverse(ArrayList<Integer> visited, TreeNode node){
         visited.add(node.getValue());
         if(node.getLeft() != null){
@@ -56,5 +62,15 @@ public class TreeTraversal {
             postOrderTraverse(visited, node.getRight());
         }
         visited.add(node.getValue());
+    }
+
+    private void inOrderTraversal(ArrayList<Integer> visited, TreeNode node){
+        if(node.getLeft() != null){
+            inOrderTraversal(visited, node.getLeft());
+        }
+        visited.add(node.getValue());
+        if(node.getRight() != null){
+            inOrderTraversal(visited, node.getRight());
+        }
     }
 }
