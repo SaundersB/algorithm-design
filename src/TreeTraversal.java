@@ -28,17 +28,33 @@ public class TreeTraversal {
      */
     public int[] preOrderDepthFirstSearch(BinarySearchTree tree){
         ArrayList<Integer> visited = new ArrayList<>();
-        this.traverse(visited, tree.getRoot());
+        this.preOrderTraverse(visited, tree.getRoot());
         return ArrayManipulator.arrayListToIntArray(visited);
     }
 
-    private void traverse(ArrayList<Integer> visited, TreeNode node){
+    public int[] postOrderDepthFirstSearch(BinarySearchTree tree){
+        ArrayList<Integer> visited = new ArrayList<>();
+        this.postOrderTraverse(visited, tree.getRoot());
+        return ArrayManipulator.arrayListToIntArray(visited);
+    }
+
+    private void preOrderTraverse(ArrayList<Integer> visited, TreeNode node){
         visited.add(node.getValue());
         if(node.getLeft() != null){
-            traverse(visited, node.getLeft());
+            preOrderTraverse(visited, node.getLeft());
         }
         if(node.getRight() != null){
-            traverse(visited, node.getRight());
+            preOrderTraverse(visited, node.getRight());
         }
+    }
+
+    private void postOrderTraverse(ArrayList<Integer> visited, TreeNode node){
+        if(node.getLeft() != null){
+            postOrderTraverse(visited, node.getLeft());
+        }
+        if(node.getRight() != null){
+            postOrderTraverse(visited, node.getRight());
+        }
+        visited.add(node.getValue());
     }
 }
