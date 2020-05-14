@@ -58,7 +58,7 @@ public class TreeTraversalTest {
         TreeTraversal treeTraversal = new TreeTraversal();
         assertArrayEquals(new int[]{3, 8, 6, 20, 15, 10}, treeTraversal.postOrderDepthFirstSearch(tree));
     }
-    
+
     @Test
     public void testInOrderDepthFirstSearch(){
         BinarySearchTree tree = new BinarySearchTree();
